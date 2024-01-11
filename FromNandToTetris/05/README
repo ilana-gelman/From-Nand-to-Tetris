@@ -1,0 +1,16 @@
+
+                           Project 5 - Computer Architecture
+                           ---------------------------------
+  
+
+Submitted Files
+---------------
+README - This file.
+ExtendAlu.hdl - 
+CpuMul.hdl -
+CPU.hdl - 
+Memory.hdl - 
+Computer.hdl - 
+GFUNC.hdl - helper CHIP for CPU/CpueMul
+DECODE.hdl - helper CHIP for CPU/CpuMul
+Include other files required by your project, if there are any.

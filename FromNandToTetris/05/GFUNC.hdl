@@ -1,0 +1,19 @@
+/**
+ *  GFUNC is helper CHIP for the CPU/CpuMul CHIPS  
+ *  Determines if jump is needed.
+ */
+CHIP GFUNC{
+
+    IN j1,j2,j3,zr,ng;
+
+    OUT out;
+
+    PARTS:
+    Or(a= zr,b=ng ,out= zrandng);
+    Not(in= zrandng,out= nzrandng);
+    And(a= nzrandng,b=j3 ,out= g);
+    And(a= zr,b=j2 ,out= e);
+    And(a= ng,b=j1 ,out= l);
+    Or(a= g,b= e,out= gore);
+    Or(a= gore,b= l,out= out);
+}

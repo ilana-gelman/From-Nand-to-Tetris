@@ -1,0 +1,16 @@
+
+                           Project 2 - Boolean Arithmetic
+                           ------------------------------
+  
+
+Submitted Files
+---------------
+README - This file.
+ShiftLeft.hdl -
+ShiftRight.hdl -
+HalfAdder.hdl - 
+FullAdder.hdl - 
+Add16.hdl - 
+Inc16.hdl - 
+ALU.hdl - 
+Or16Way.hdl- helper chip for ALU

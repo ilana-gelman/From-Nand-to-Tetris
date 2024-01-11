@@ -1,0 +1,28 @@
+/**
+ * DECODE is helper CHIP for the CPU/CpuMul CHIPS   
+ * This CHIP decodes the instruction input to its components (msb,c's,dest,writeM,jump)
+ */
+ 
+CHIP DECODE {
+
+    IN instruction[16];
+
+    OUT msb,nmsb,c1,c2,c3,c4,c5,c6,d1,d2,writeM,j1,j2,j3;
+
+    PARTS:
+    // Put your code here:
+    Mux(a= false,b=true,sel= instruction[15],out= msb,out=m); 
+    Not(in=m,out=nmsb,out=nm);
+    And(a= instruction[6],b= m,out= c6);
+    And(a= instruction[7],b= m,out= c5);
+    Or(a= instruction[8],b= nm,out= c4);
+    Or(a= instruction[9],b= nm,out= c3);
+    And(a= instruction[10],b= m,out= c2);
+    And(a= instruction[11],b= m,out= c1);
+    Or(a= instruction[5],b= nm,out= d1);
+    And(a= instruction[4],b= m,out= d2);
+    And(a= instruction[3],b= m,out= writeM);
+    And(a= instruction[0],b= m,out= j3);
+    And(a= instruction[1],b= m,out= j2);
+    And(a= instruction[2],b= m,out= j1);
+}
